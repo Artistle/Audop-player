@@ -33,7 +33,7 @@ public class RecyclerSongAdapter extends RecyclerView.Adapter<RecyclerSongAdapte
     public void onBindViewHolder(ViewHolder holder, int position) {
         SongModel songs = list.get(position);
 
-        holder.artist.setText(songs.getText());
+        holder.artist.setText(songs.getAlbum());
         holder.title.setText(songs.getTitle());
     }
 

@@ -1,22 +1,26 @@
 package com.example.artistle.play_music_service.Model;
 
-public class SongModel {
-    private long id;
+import java.io.Serializable;
+
+public class SongModel implements Serializable {
+    private String data;
     private String title;
-    private String text;
+    private String album;
+    private String artist;
 
-    public SongModel(long id, String title, String text) {
-        this.id = id;
+    public SongModel(String data, String title, String album, String artist) {
+        this.data = data;
         this.title = title;
-        this.text = text;
+        this.album = album;
+        this.artist = artist;
     }
 
-    public long getId() {
-        return id;
+    public String getData() {
+        return data;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setData(String data) {
+        this.data = data;
     }
 
     public String getTitle() {
@@ -27,11 +31,19 @@ public class SongModel {
         this.title = title;
     }
 
-    public String getText() {
-        return text;
+    public String getAlbum() {
+        return album;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setAlbum(String album) {
+        this.album = album;
+    }
+
+    public String getArtist() {
+        return artist;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 }
